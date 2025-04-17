@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(94, 63, 63);
+  color: bisque;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+  font-size: 60px;
+}
+label{
+  font-size: 20px;
+  color: rgb(141, 141, 142);
+  margin: 7px;
+}
+#number , #roman{
+  width: 120px;
+  height: 30px;
+  font-size: 20px;
+  margin: 10px;
+}
+.btn{
+    background:linear-gradient(45deg,rgb(96, 96, 132) ,rgb(104, 76, 104) 60%);
+    height: 40px;
+   font-size: 20px;
+    color: rgb(46, 40, 40);
+    border: 2px solid rgb(189, 150, 225);
+    border-radius: 10px;
+    margin: 6px;
+    padding: 4px;
+}
+.btn:hover {
+    background: linear-gradient(45deg, rgb(120, 120, 160), rgb(130, 100, 130) 60%);
+    cursor: pointer;
+  }
+  
+#output{
+    color: rgb(232, 246, 170);
+    font-size: 30px;
+    margin: 4px;
+ 
+}
+.output{
+        background-color: grey;
+opacity: 0.6;
+padding: 10px;
+border: 3px dashed rgb(94, 85, 85); 
+}
+#number, #convert-btn {
+    max-width: 90%;
+  }
+  

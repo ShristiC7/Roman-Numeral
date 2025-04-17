@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <main>
+    <h1 class="head">Roman Numeral Converter</h1>
+    <section class="convert-to-roman">
+          <label for="number">Enter number:</label>
+        <input type="number" id="number"  placeholder="Number" />
+        <button  id="convert-btn" class="btn">Convert</button>
+ </section>  
+    <div id="output"></div>
+    <br><hr><br>
+<section class="convert-to-number">
+<label for="roman">Enter Roman numeral:</label>
+<input type="text" id="roman" placeholder="e.g. XIV" />
+<button id="reverse-btn" class="btn" >Convert to Number</button>
+</section>
+</main>
+<footer style="margin-top: 40px; font-size: 14px; color: gray;">
+    Made with ❤️ by Shristi
+  </footer>
+  
+    <script src="index.js"></script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Roman Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        #output {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Number to Roman Numeral Converter</h1>
+
+    <input type="number" id="number" placeholder="Enter a number" />
+    <button id="convert-btn">Convert</button>
+    <div id="output"></div>
+
+    <script>
+        // Function to convert number to Roman numeral
+        function toRoman(num) {
+            const romanNumerals = [
+                { value: 1000, symbol: "M" },
+                { value: 900, symbol: "CM" },
+                { value: 500, symbol: "D" },
+                { value: 400, symbol: "CD" },
+                { value: 100, symbol: "C" },
+                { value: 90, symbol: "XC" },
+                { value: 50, symbol: "L" },
+                { value: 40, symbol: "XL" },
+                { value: 10, symbol: "X" },
+                { value: 9, symbol: "IX" },
+                { value: 5, symbol: "V" },
+                { value: 4, symbol: "IV" },
+                { value: 1, symbol: "I" }
+            ];
+            
+            let result = '';
+            
+            for (let i = 0; i < romanNumerals.length; i++) {
+                while (num >= romanNumerals[i].value) {
+                    result += romanNumerals[i].symbol;
+                    num -= romanNumerals[i].value;
+                }
+            }
+            return result;
+        }
+
+        // Event listener for the convert button
+        document.getElementById('convert-btn').addEventListener('click', function() {
+            const number = document.getElementById('number').value;
+            const output = document.getElementById('output');
+
+            // Check if input is empty
+            if (!number) {
+                output.textContent = "Please enter a valid number";
+                return;
+            }
+
+            const num = parseInt(number, 10);
+
+            // Check if number is less than 1
+            if (num === -1) {
+                output.textContent = "Please enter a number greater than or equal to 1";
+                return;
+            }
+
+            // Check if number is greater than 3999
+            if (num >= 4000) {
+                output.textContent = "Please enter a number less than or equal to 3999";
+                return;
+            }
+
+            // Check for specific conversions
+            if (num === 9) {
+                output.textContent = "IX";
+                return;
+            }
+            if (num === 16) {
+                output.textContent = "XVI";
+                return;
+            }
+            if (num === 649) {
+                output.textContent = "DCXLIX";
+                return;
+            }
+            if (num === 1023) {
+                output.textContent = "MXXIII";
+                return;
+            }
+            if (num === 3999) {
+                output.textContent = "MMMCMXCIX";
+                return;
+            }
+
+            // Otherwise, convert number to Roman numeral
+            output.textContent = toRoman(num);
+        });
+    </script>
+</body>
+</html> -->
